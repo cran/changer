@@ -1,5 +1,8 @@
 # changer
-[![Build Status](https://travis-ci.org/helske/changer.png?branch=master)](https://travis-ci.org/helske/changer)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/helske/changer/workflows/R-CMD-check/badge.svg)](https://github.com/helske/changer/actions)
+<!-- badges: end -->
+
 
 Changing the name of an existing R package is annoying but common task in the early stages of package development (at least for me). Package `changer` tries to automate this task:
 
@@ -22,7 +25,7 @@ Changing the name of an existing R package is annoying but common task in the ea
 
 
 
-Inspired by back-and-forth naming of the package [particlefields](https://github.com/helske/particlefields)) and [Nick Tierney's blog post]( https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+Inspired by back-and-forth naming of the package [particlefield](https://github.com/helske/particlefield)) and [Nick Tierney's blog post]( https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
 
 ## Additional issues (read above as well)
@@ -45,4 +48,9 @@ There is just one function in the package:
 ``` r
 changer("../mypackagewithlongandboringname", "Rbitary")
 ```
+
+## News
+
+- `changer` now tests that the suplied path actually contains an R package by checking the existence of the `DESCRIPTION` file.
+- yaml files are also checked, and warning is given regarding the rda files, thanks to Mahmoud Ahmed.
 
